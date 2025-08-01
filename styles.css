@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'Geologica';
+  src: url('https://fonts.googleapis.com/css2?family=Geologica:wght@400;700&display=swap');
+}
+
+body {
+  font-family: 'Geologica', sans-serif;
+}
+
+#code-editor {
+  font-family: 'Geologica', monospace;
+  font-size: 16px;
+  min-height: 400px;
+  resize: vertical;
+}
+
+.prism-tgeasy {
+  background: #1a202c !important;
+  color: #e2e8f0 !important;
+}
+
+.run-button {
+  background-color: #10b981;
+  transition: background-color 0.3s;
+}
+
+.run-button:hover {
+  background-color: #059669;
+}
