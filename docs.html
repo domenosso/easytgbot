@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Документация - TGEASYbot</title>
+  <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body class="font-geologica bg-gray-100">
+  <header class="bg-blue-600 text-white p-4 shadow-md">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">TGEASYbot</h1>
+      <div>
+        <a href="index.html" class="px-4 py-2 hover:underline">Редактор</a>
+        <a href="https://t.me/myactuserxq" target="_blank" class="px-4 py-2 hover:underline">Создатель</a>
+      </div>
+    </div>
+  </header>
+  <main class="container mx-auto p-6">
+    <h2 class="text-3xl font-bold mb-6">Документация TGEASYbot</h2>
+    <p class="mb-4">TGEASYbot — это простой язык для создания Telegram-ботов. Ниже приведены все команды и примеры.</p>
+
+    <h3 class="text-2xl font-semibold mb-4">Команды</h3>
+    <ul class="list-disc pl-6 mb-6">
+      <li><strong>установка токена</strong>: Указывает токен бота.<br>Пример: <code>токен 123456:ABCDEF</code></li>
+      <li><strong>обработка команд</strong>: Реагирует на команды, начинающиеся с "/".<br>Пример:
+        <pre class="bg-gray-800 text-white p-4 rounded"><code>команда /start
+написать "Привет, я бот!"
+конец</code></pre>
+      </li>
+      <li><strong>написать</strong>: Отправляет сообщение пользователю.<br>Пример: <code>написать "Привет!"</code></li>
+      <li><strong>константы пользователя</strong>: Доступ к данным пользователя.<br>Пример: <code>id, user, name</code></li>
+      <li><strong>рандом</strong>: Генерирует случайное число.<br>Пример: <code>рандом(1,10)</code></li>
+      <li><strong>обычный текст</strong>: Обрабатывает текстовые сообщения.<br>Пример:
+        <pre class="bg-gray-800 text-white p-4 rounded"><code>текст от пользователя привет
+написать "Привет! Чем могу помочь?"
+конец</code></pre>
+      </li>
+    </ul>
+
+    <h3 class="text-2xl font-semibold mb-4">Примеры ботов</h3>
+    <div class="mb-6">
+      <h4 class="text-xl font-semibold mb-2">1. Бот, выдающий информацию о пользователе</h4>
+      <pre class="bg-gray-800 text-white p-4 rounded"><code>установка токена
+токен ВАШ_ТОКЕН
+
+команда /start
+написать "Привет, {name}! Твой ID: {id}, имя пользователя: {user}"
+конец
+</code></pre>
+      <p class="mt-2">Этот бот приветствует пользователя и показывает его данные.</p>
+    </div>
+    <div class="mb-6">
+      <h4 class="text-xl font-semibold mb-2">2. Рандомайзер</h4>
+      <pre class="bg-gray-800 text-white p-4 rounded"><code>установка токена
+токен ВАШ_ТОКЕН
+
+команда /random
+написать "Случайное число: {рандом(1,100)}"
+конец
+</code></pre>
+      <p class="mt-2">Этот бот генерирует случайное число от 1 до 100 по команде /random.</p>
+    </div>
+    <div class="mb-6">
+      <h4 class="text-xl font-semibold mb-2">3. Эхо-бот</h4>
+      <pre class="bg-gray-800 text-white p-4 rounded"><code>установка токена
+токен ВАШ_ТОКЕН
+
+текст от пользователя любой_текст
+написать "Ты написал: {любой_текст}"
+конец
+</code></pre>
+      <p class="mt-2">Этот бот повторяет любое сообщение пользователя.</p>
+    </div>
+  </main>
+</body>
+</html>
